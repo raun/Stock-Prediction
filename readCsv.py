@@ -40,7 +40,6 @@ def ExponentialMovingAverage(preEMA,closingPrice,SMA):
 		preEMA of type float which is previous day EMA
 		closingPrice of type float which is previous day closing price
 	OUTPUT : returns the Exponential Moving Average as float'''
-	n = 10
 	multiplier = 0.1818
 	EMA = (closingPrice - preEMA)*multiplier + preEMA
 	return EMA
@@ -91,10 +90,7 @@ def PROC(closingPrice):
 	return (closingPrice[-1] - closingPrice[0])*100/closingPrice[0]
 
 def CPACC(closingPrice):
-	return (closingPrice[-1] - closingPrice[0])*100/closingPrice[0]
-
-def HPACC(highestPrice):
-	return (highestPrice[-1] - highestPrice[0])*100/highestPrice[0]
+	return (closingPrice[-1] - closingPrice[0])/len(closingPrice)
 
 def main():
 	# FETCHING DATA FROM FILE
