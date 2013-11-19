@@ -14,6 +14,8 @@ def main():
 
 	plot(cpacc)
 	plot(hpacc)
+	ylabel('Value')
+	xlabel('For Different Dates')
 	legend(['Closing Price Acceleration','High Price Acceleration'], loc='upper left')
 	show()
 

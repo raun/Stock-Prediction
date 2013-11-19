@@ -8,7 +8,7 @@ def main():
 	plot(openingPrice[199:])
 
 	# Calculate SMA10
-	SMAlst=[]
+	SMAlst=[0,0,0,0,0,0,0,0,0,0]
 	for i in range(199,len(openingPrice)):
 		SMAlst.append(SimpleMovingAverage(openingPrice[i:i+10]))
 	plot(SMAlst)
@@ -18,6 +18,8 @@ def main():
 	for i in range(199,len(openingPrice)-10):
 		EMAlst.append(ExponentialMovingAverage(EMAlst[i-199],closingPrice[i],SMAlst[i-198]))
 	plot(EMAlst)
+	ylabel('Value')
+	xlabel('For Different Dates')
 	legend(['Opening Price','Simple Moving Average','Exponential Moving Average'], loc='upper left')
 	show()
 

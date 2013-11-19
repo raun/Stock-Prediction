@@ -11,6 +11,8 @@ def main():
 	for i in range(199,len(openingPrice)-10):
 		STOClst.append(STOC(closingPrice[i],lowestPrice[i:i+10],highestPrice[i:i+10]))
 	plot(STOClst)
+	ylabel('Value')
+	xlabel('For Different Dates')
 	legend(['Stochastic Oscillator'],loc='upper left')
 	show()
 

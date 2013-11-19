@@ -15,6 +15,8 @@ def main():
 		else:
 			ADOlst.append(a)
 	plot(ADOlst)
+	ylabel('Value')
+	xlabel('For Different Dates')
 	legend(['Accumulation/Distribution Oscillator'],loc='upper left')
 	show()
 
